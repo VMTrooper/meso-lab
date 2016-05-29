@@ -17,7 +17,11 @@ Vagrant.configure("2") do |config|
       box.vm.network :private_network, ip: "192.168.33.#{ip_start}", :netmask => "255.255.255.0"
 
       box.vm.provider :vmware_fusion do |v|
-        v.vmx["memsize"] = 1024
+        if hostname=="node1"
+          v.vmx["memsize"] = 2048
+        else
+          v.vmx["memsize"] = 1024
+        end
       end
     # Run the Shell Provisioning Scripts
     # Getting around Vagrant's "feature" to continually set hostname to resolve to 127.0.0.1
