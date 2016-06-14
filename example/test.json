@@ -1,0 +1,6 @@
+{
+    "id": "/testapp",
+    "cmd": "python -m SimpleHTTPServer",
+    "cpus": 0.5,
+    "mem": 256.0
+}

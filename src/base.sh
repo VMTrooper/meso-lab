@@ -8,10 +8,10 @@ echo "
 " | sudo tee -a /etc/hosts
 
 # Need to install epel-release to get pip
-sudo yum install -y epel-release
+sudo yum install -y -q epel-release
 
 # Need to install pip so that mesos cli prereqs get installed
-sudo yum install -y python-pip
+sudo yum install -y -q python-pip
 
 # Failed attempts to circumvent Vagrant automatically configuring /etc/hosts
 # to resolve the hostname to 127.0.0.1 EACH and EVERY login!!!
